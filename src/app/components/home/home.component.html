@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Tienda de Cafes</title>
+    </head>
+    <body>
+        <main>
+            <div class="album py-5 bg-light">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                        <!-- se generar un for para pasar la data-->
+                        <div class="col" *ngFor="let producto of productosList" >
+                            <div class="card shadow-sm">
+                                <img src="{{producto.foto}}" class="bd-placeholder-img card-img-top" width="100%" height="225" role="img"  preserveAspectRatio="xMidYMid slice"/>
+                                <div class="card-body">
+                                    <p class="card-text">{{producto.nombre}}</p>
+                                    <p class="card-text">{{producto.descripcion}}</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Comprar</button>
+                                            <button type="button" class="btn btn-sm btn-outline-secondary">Alertar</button>
+                                        </div>
+                                        <small class="text-muted">{{producto.precio}}</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </main>       
+    </body>
+</html>
